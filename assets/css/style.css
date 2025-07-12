@@ -1,0 +1,56 @@
+:root,
+:root[data-theme='dark'] {
+    --primary-color: #1a1a1a;
+    --secondary-color: #333;
+    --text-color: #f0f0f0;
+    --accent-color: #ff5722;
+}
+:root[data-theme='light'] {
+    --primary-color: #ffffff;
+    --secondary-color: #f0f0f0;
+    --text-color: #1a1a1a;
+    --accent-color: #ff5722;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+main {
+    padding: 2rem;
+}
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 1rem;
+}
