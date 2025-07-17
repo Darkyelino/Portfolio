@@ -1,42 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap");
+
 :root,
 :root[data-theme='dark'] {
     --primary-color: #1a1a1a;
     --secondary-color: #333;
     --text-color: #f0f0f0;
     --accent-color: #ff5722;
+    --box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.2);
 }
 :root[data-theme='light'] {
     --primary-color: #ffffff;
     --secondary-color: #f0f0f0;
     --text-color: #1a1a1a;
     --accent-color: #ff5722;
+    --box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.1);
 }
 
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-bg-color) transparent;
+} */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--primary-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: var(--secondary-color);
     padding: 1rem;
 }
+
+#toggleTheme {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: ease-in-out 0.4s;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     gap: 1rem;
+    justify-content: flex-end;
 }
-nav ul li {
-    display: inline;
-}
+
 nav ul li a {
-    color: var(--text-color);
     text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 0.25rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
+
+nav ul li a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
 main {
     padding: 2rem;
 }
@@ -44,7 +77,6 @@ footer {
     background-color: var(--secondary-color);
     color: var(--text-color);
     text-align: center;
-    padding: 1rem;
     position: relative;
     bottom: 0;
     width: 100%;
